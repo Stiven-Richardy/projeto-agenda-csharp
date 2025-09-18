@@ -36,9 +36,9 @@ namespace projeto_agenda
         public static void Titulo(string titulo)
         {
             Console.Clear();
-            Console.WriteLine("============================================");
+            Console.WriteLine(new string('=', 44));
             Console.WriteLine($" SISTEMA DE VENDAS - {titulo}");
-            Console.WriteLine("============================================");
+            Console.WriteLine(new string('=', 44));
         }
 
         public static void MensagemErro(string texto)

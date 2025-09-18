@@ -36,7 +36,7 @@ namespace projeto_agenda
                 Console.WriteLine(" 3 - Alterar contato");
                 Console.WriteLine(" 4 - Remover contato");
                 Console.WriteLine(" 5 - Listar contatos");
-                Console.WriteLine("--------------------------------------------");
+                Console.WriteLine(new string('-', 44));
                 Console.Write(" Escolha uma opção: ");
                 seletor = Utils.lerInt(Console.ReadLine(), 0, " Entrada inválida!\n Informe outro número: ");
 
@@ -46,7 +46,7 @@ namespace projeto_agenda
                         Console.WriteLine(" Programa finalizado!");
                         break;
                     case 1:
-                        // adicionarContato();
+                        adicionarContato();
                         break;
                     case 2:
                         // pesquisarContato();
@@ -65,6 +65,41 @@ namespace projeto_agenda
                         break;
                 }
             }
+        }
+
+        static void adicionarContato()
+        {
+            Utils.Titulo("ADICIONAR CONTATO");
+            Console.Write(" Informe o nome: ");
+            string nome = Console.ReadLine();
+            Console.Write(" Informe o email: ");
+            string email = Console.ReadLine();
+
+            // data
+            Console.WriteLine(" Informe a Data de Nascimento");
+            Console.Write(" Informe o dia: ");
+            int dia = Utils.lerInt(Console.ReadLine(), 0, " Entrada inválida!\n Tente novamente: ");
+            Console.Write(" Informe o mes: ");
+            int mes = Utils.lerInt(Console.ReadLine(), 0, " Entrada inválida!\n Tente novamente: ");
+            Console.Write(" Informe o ano: ");
+            int ano = Utils.lerInt(Console.ReadLine(), 0, " Entrada inválida!\n Tente novamente: ");
+            Data dataNasc = new Data(dia, mes, ano);
+
+            // telefone
+            Console.WriteLine(" Informe o Telefone");
+            Console.Write(" Informe o tipo: ");
+            string tipo = Console.ReadLine();
+            Console.Write(" Informe o número: ");
+            string numero = Console.ReadLine();
+            Console.Write(" Esse é o telefone principal (1 = Sim / 0 = Não): ");
+            int verificador = Utils.lerInt(Console.ReadLine(), 0, " Entrada inválida!\n Tente novamente: ");
+            bool principal = false;
+            if (verificador == 1)
+                principal = true;
+            Telefone telefone = new Telefone(tipo, numero, principal);
+
+            // contato
+            Contato contato = new Contato(nome, email, dataNasc, telefone);
         }
     }
 }

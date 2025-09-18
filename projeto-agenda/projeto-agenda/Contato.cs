@@ -18,12 +18,12 @@ namespace projeto_agenda
         public Data DtNasc { get => dtNasc; set => dtNasc = value; }
         public List<Telefone> Telefones { get => telefones; set => telefones = value; }
 
-        public Contato(string email, string nome, Data dtNasc, List<Telefone> telefones)
+        public Contato(string email, string nome, Data dtNasc, Telefone telefone)
         {
             Email = email;
             Nome = nome;
             DtNasc = dtNasc;
-            Telefones = telefones;
+            Telefones.Add(telefone);
         }
 
         public int getIdade()
