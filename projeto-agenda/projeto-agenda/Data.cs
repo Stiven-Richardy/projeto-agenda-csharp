@@ -32,7 +32,7 @@ namespace projeto_agenda
 
         public override string ToString()
         {
-            return this.Dia.ToString("00") + "/" + this.Mes.ToString("00") + "/" + this.Ano.ToString("00");
+            return $"{this.dia:00}/{this.mes:00}/{this.ano:0000}";
         }
     }
 }
