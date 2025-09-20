@@ -53,7 +53,7 @@ namespace projeto_agenda
                         adicionarContato();
                         break;
                     case 2:
-                        // pesquisarContato();
+                        pesquisarContato();
                         break;
                     case 3:
                         // alterarContato();
@@ -108,6 +108,27 @@ namespace projeto_agenda
                 Utils.MensagemSucesso("Contato adicionado com sucesso.");
             else
                 Utils.MensagemErro("Não foi possível adicionar o contato. O nome ou o telefone já existe.");
+        }
+
+        static void pesquisarContato()
+        {
+            Utils.Titulo("PESQUISAR CONTATO");
+            Console.Write(" Informe o nome do contato: ");
+            string nome = Console.ReadLine();
+
+            Contato contatoPesquisado = new Contato(nome);
+            Contato encontrou = agenda.pesquisar(contatoPesquisado);
+
+            if (encontrou != null)
+            {
+                Utils.Titulo("PESQUISAR CONTATO");
+                Console.WriteLine(encontrou.ToString());
+                Utils.MensagemSucesso("Contato encontrado.");
+            }
+            else
+            {
+                Utils.MensagemErro("Contato não encontrado.");
+            }
         }
     }
 }

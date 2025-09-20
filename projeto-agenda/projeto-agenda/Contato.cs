@@ -18,6 +18,13 @@ namespace projeto_agenda
         public Data DtNasc { get => dtNasc; set => dtNasc = value; }
         public List<Telefone> Telefones { get => telefones; set => telefones = value; }
 
+        public Contato(string email, string nome, Data dtNasc)
+        {
+            Email = email;
+            Nome = nome;
+            DtNasc = dtNasc;
+        }
+
         public Contato(string email, string nome, Data dtNasc, Telefone telefone)
         {
             Email = email;
@@ -26,9 +33,17 @@ namespace projeto_agenda
             adicionarTelefone(telefone);
         }
 
+        public Contato(string nome) : this("", nome, null) { }
+
         public int getIdade()
         {
-            return 0;
+            DateTime dataAtual = DateTime.Now;
+            int idade = dataAtual.Year - dtNasc.Ano;
+            if (dataAtual.Month < dtNasc.Mes || (dataAtual.Month == dtNasc.Mes && dataAtual.Day < dtNasc.Dia))
+            {
+                idade--;
+            }
+            return idade;
         }
 
         public void adicionarTelefone(Telefone t)
@@ -52,7 +67,30 @@ namespace projeto_agenda
 
         public override string ToString()
         {
-            return "";
+            StringBuilder s = new StringBuilder();
+            s.AppendLine($" Nome: {Nome}");
+            s.AppendLine($" Email: {Email}");
+            s.AppendLine($" Data de Nascimento: {DtNasc.ToString()}");
+            s.AppendLine($" Idade: {getIdade()} anos");
+            s.AppendLine($" Telefone Principal: {getTelefonePrincipal()}");
+            if (telefones.Count > 0)
+            {
+                s.AppendLine(" Outros Telefones:");
+                foreach (var tel in telefones.Where(t => !t.Principal))
+                {
+                    s.AppendLine($" - {tel.Tipo}: {tel.Numero}");
+                }
+            }
+            return s.ToString();
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool igual = false;
+            if (obj is Contato outroContato)
+                if (Nome.Equals(outroContato.Nome, StringComparison.OrdinalIgnoreCase))
+                    igual = true;
+            return igual;
         }
     }
 }
