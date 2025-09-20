@@ -1,0 +1,7 @@
+C:\IFSP\2025\ESD-2\projeto-agenda-csharp\projeto-agenda\projeto-agenda\obj\Debug\projeto-agenda.csproj.AssemblyReference.cache
+C:\IFSP\2025\ESD-2\projeto-agenda-csharp\projeto-agenda\projeto-agenda\obj\Debug\projeto-agenda.csproj.CoreCompileInputs.cache
+C:\IFSP\2025\ESD-2\projeto-agenda-csharp\projeto-agenda\projeto-agenda\bin\Debug\projeto-agenda.exe.config
+C:\IFSP\2025\ESD-2\projeto-agenda-csharp\projeto-agenda\projeto-agenda\bin\Debug\projeto-agenda.exe
+C:\IFSP\2025\ESD-2\projeto-agenda-csharp\projeto-agenda\projeto-agenda\bin\Debug\projeto-agenda.pdb
+C:\IFSP\2025\ESD-2\projeto-agenda-csharp\projeto-agenda\projeto-agenda\obj\Debug\projeto-agenda.exe
+C:\IFSP\2025\ESD-2\projeto-agenda-csharp\projeto-agenda\projeto-agenda\obj\Debug\projeto-agenda.pdb
