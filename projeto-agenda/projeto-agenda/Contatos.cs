@@ -17,19 +17,38 @@ namespace projeto_agenda
             this.agenda = agenda;
         }
 
+        public Contatos()
+        {
+            this.agenda = new List<Contato>();
+        }
+
         public bool adicionar(Contato c)
         {
-            return false;
+            bool contatoExiste = agenda.Any(contatoExistente => contatoExistente.Nome.Equals(c.Nome, StringComparison.OrdinalIgnoreCase) ||
+                (c.getTelefonePrincipal() != "Não possui telefone principal" && contatoExistente.getTelefonePrincipal().Equals(c.getTelefonePrincipal())));
+            bool adicionou = false;
+            if (!contatoExiste)
+            {
+                agenda.Add(c);
+                adicionou = true;
+            }
+            return adicionou;
         }
 
         public Contato pesquisar(Contato c)
         {
-            return null;
+            return agenda.Find(contato => contato.Nome.Equals(c.Nome, StringComparison.OrdinalIgnoreCase));
         }
 
         public bool alterar(Contato c)
         {
-            return true;
+            bool alterou = false;
+            Contato contatoPesquisado = pesquisar(c);
+            if (contatoPesquisado != null)
+            {
+                alterou = true;
+            }
+            return alterou;
         }
 
         public bool remover(Contato c)
