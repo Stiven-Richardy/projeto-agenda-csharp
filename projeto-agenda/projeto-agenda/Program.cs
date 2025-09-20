@@ -59,7 +59,7 @@ namespace projeto_agenda
                         alterarContato();
                         break;
                     case 4:
-                        // removerContato();
+                        removerContato();
                         break;
                     case 5:
                         // listarContatos();
@@ -182,6 +182,23 @@ namespace projeto_agenda
             }
             else
                 Utils.MensagemErro("Contato não encontrado.");
+        }
+
+        static void removerContato()
+        {
+            Utils.Titulo("REMOVER CONTATO");
+            Console.Write(" Informe o nome: ");
+            string nome = Console.ReadLine();
+            Contato contatoRemovido = new Contato(nome);
+
+            if (agenda.remover(contatoRemovido))
+            {
+                Utils.MensagemSucesso("Contato removido com sucesso.");
+            }
+            else
+            {
+                Utils.MensagemErro("Não foi possível remover o contato. Nome não encontrado.");
+            }
         }
     }
 }
