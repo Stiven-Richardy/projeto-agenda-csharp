@@ -42,7 +42,13 @@ namespace projeto_agenda
 
         public bool alterar(Contato c)
         {
-            return true;
+            bool alterou = false;
+            Contato contatoPesquisado = pesquisar(c);
+            if (contatoPesquisado != null)
+            {
+                alterou = true;
+            }
+            return alterou;
         }
 
         public bool remover(Contato c)

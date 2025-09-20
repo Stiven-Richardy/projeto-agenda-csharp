@@ -48,15 +48,14 @@ namespace projeto_agenda
 
         public void adicionarTelefone(Telefone t)
         {
-            if (t.Principal)
+            if (t != null && t.Principal)
             {
                 Telefone principalAtual = telefones.Find(tel => tel.Principal);
                 if (principalAtual != null)
-                {
                     principalAtual.Principal = false;
-                }
             }
-            telefones.Add(t);
+            if (t != null)
+                telefones.Add(t);
         }
 
         public string getTelefonePrincipal()

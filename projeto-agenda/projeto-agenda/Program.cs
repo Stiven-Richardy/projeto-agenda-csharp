@@ -56,7 +56,7 @@ namespace projeto_agenda
                         pesquisarContato();
                         break;
                     case 3:
-                        // alterarContato();
+                        alterarContato();
                         break;
                     case 4:
                         // removerContato();
@@ -77,28 +77,28 @@ namespace projeto_agenda
             Console.WriteLine(" DADOS PESSOAIS");
             Console.Write(" Informe o nome: ");
             string nome = Console.ReadLine();
-            Console.Write(" Informe o email: ");
-            string email = Utils.lerRegex(regexEmail, " Email inválido!\n Tente novamente: ");
+            Console.Write(" Informe o e-mail: ");
+            string email = Utils.lerRegex(regexEmail, " E-mail inválido!\n Tente novamente: ");
 
             Utils.Titulo("ADICIONAR CONTATO 2/3");
             Console.WriteLine(" DATA DE NASCIMENTO");
             Console.Write(" Informe o ano: ");
-            int ano = Utils.lerMinMax(Console.ReadLine(), 1900, DateTime.Now.Year, " Entrada inválida!\n Tente novamente: ");
+            int ano = Utils.lerMinMax(Console.ReadLine(), 1900, DateTime.Now.Year, " Ano inválido!\n Tente novamente: ");
             Console.Write(" Informe o mês: ");
-            int mes = Utils.lerMinMax(Console.ReadLine(), 1, 12, " Entrada inválida!\n Tente novamente: ");
+            int mes = Utils.lerMinMax(Console.ReadLine(), 1, 12, " Mês inválido!\n Tente novamente: ");
             int diasNoMes = DateTime.DaysInMonth(ano, mes);
             Console.Write(" Informe o dia: ");
-            int dia = Utils.lerMinMax(Console.ReadLine(), 1, diasNoMes, " Entrada inválida!\n Tente novamente: ");
+            int dia = Utils.lerMinMax(Console.ReadLine(), 1, diasNoMes, " Dia inválido!\n Tente novamente: ");
             Data dataNasc = new Data(dia, mes, ano);
 
             Utils.Titulo("ADICIONAR CONTATO 3/3");
             Console.WriteLine(" TELEFONE");
             Console.Write(" Lista de Tipos:\n 1. Celular\n 2. Telefone Fixo\n Informe o tipo: ");
-            string tipo = Utils.lerTipo(Console.ReadLine(), " Entrada inválida!\n Tente novamente: ");
+            string tipo = Utils.lerTipo(Console.ReadLine(), " Tipo inválido!\n Tente novamente: ");
             Console.Write(" Informe o número: ");
             string numero = Utils.lerRegex(regexTelefone, " Número inválido!\n Tente novamente: ");
             Console.Write(" Esse é o telefone principal?\n 1. Sim\n 0. Não\n Informe uma das opções: ");
-            int verificadorPrincipal = Utils.lerMinMax(Console.ReadLine(), 0, 1, " Entrada inválida!\n Tente novamente: ");
+            int verificadorPrincipal = Utils.lerMinMax(Console.ReadLine(), 0, 1, " Opção inválida!\n Tente novamente: ");
             bool principal = (verificadorPrincipal == 1);
 
             Telefone telefone = new Telefone(tipo, numero, principal);
@@ -129,6 +129,59 @@ namespace projeto_agenda
             {
                 Utils.MensagemErro("Contato não encontrado.");
             }
+        }
+
+        static void alterarContato()
+        {
+            Utils.Titulo("ALTERAR CONTATO");
+            Console.Write(" Informe o nome do contato: ");
+            string nome = Console.ReadLine();
+
+            Contato contatoPesquisado = new Contato(nome);
+            Contato encontrou = agenda.pesquisar(contatoPesquisado);
+
+            if (encontrou != null)
+            {
+                Utils.Titulo("ALTERAR CONTATO 1/3");
+                Console.WriteLine(" NOVOS DADOS PESSOAIS");
+                Console.Write($" Nome (atual: {encontrou.Nome}): ");
+                string novoNome = Console.ReadLine();
+                Console.Write($" E-mail (atual: {encontrou.Email}): ");
+                string novoEmail = Utils.lerRegex(regexEmail, " E-mail inválido!\n Tente novamente: ");
+
+                Utils.Titulo("ALTERAR CONTATO 2/3");
+                Console.WriteLine(" NOVA DATA DE NASCIMENTO");
+                Console.Write($" Ano (atual: {encontrou.DtNasc.Ano}): ");
+                int novoAno = Utils.lerMinMax(Console.ReadLine(), 1900, DateTime.Now.Year, " Ano inválido!\n Tente novamente: ");
+                Console.Write($" Mês (atual: {encontrou.DtNasc.Mes}): ");
+                int novoMes = Utils.lerMinMax(Console.ReadLine(), 1, 12, " Mês inválido!\n Tente novamente: ");
+                int diasNoMes = DateTime.DaysInMonth(novoAno, novoMes);
+                Console.Write($" Dia (atual: {encontrou.DtNasc.Dia}): ");
+                int novoDia = Utils.lerMinMax(Console.ReadLine(), 1, diasNoMes, " dia inválido!\n Tente novamente: ");
+                Data novaDataNasc = new Data(novoDia, novoMes, novoAno);
+
+                Utils.Titulo("ALTERAR CONTATO 3/3");
+                Console.WriteLine(" NOVO TELEFONE");
+                Console.Write($" Lista de Tipos:\n 1. Celular\n 2. Telefone Fixo\n Informe o tipo: ");
+                string novoTipo = Utils.lerTipo(Console.ReadLine(), " Tipo inválido!\n Tente novamente: ");
+                Console.Write(" Número: ");
+                string novoNumero = Utils.lerRegex(regexTelefone, " Número inválido!\n Tente novamente: ");
+                Console.Write(" Esse é o novo telefone principal?\n 1. Sim\n 0. Não\n Informe uma das opções: ");
+                int verificadorPrincipal = Utils.lerMinMax(Console.ReadLine(), 0, 1, " Opção inválida!\n Tente novamente: ");
+                bool novoPrincipal = (verificadorPrincipal == 1);
+                Telefone novoTelefone = new Telefone(novoTipo, novoNumero, novoPrincipal);
+
+                encontrou.Nome = novoNome;
+                encontrou.Email = novoEmail;
+                encontrou.DtNasc = novaDataNasc;
+                encontrou.adicionarTelefone(novoTelefone);
+                if (agenda.alterar(encontrou))
+                    Utils.MensagemSucesso("Contato alterado com sucesso.");
+                else
+                    Utils.MensagemErro("Não foi possível alterar o contato.");
+            }
+            else
+                Utils.MensagemErro("Contato não encontrado.");
         }
     }
 }
