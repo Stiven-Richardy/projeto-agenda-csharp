@@ -37,7 +37,7 @@ namespace projeto_agenda
 
         public Contato pesquisar(Contato c)
         {
-            return null;
+            return agenda.Find(contato => contato.Nome.Equals(c.Nome, StringComparison.OrdinalIgnoreCase));
         }
 
         public bool alterar(Contato c)
