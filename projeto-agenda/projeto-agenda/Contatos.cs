@@ -53,7 +53,14 @@ namespace projeto_agenda
 
         public bool remover(Contato c)
         {
-            return false;
+            bool removeu = false;
+            Contato pesquisou = pesquisar(c);
+            if (pesquisou != null)
+            {
+                agenda.Remove(pesquisou);
+                removeu = true;
+            }
+            return removeu;
         }
     }
 }

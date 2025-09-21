@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|solutionrelative:projeto-agenda\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\contatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|solutionrelative:projeto-agenda\\contatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\contato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|solutionrelative:projeto-agenda\\contato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|c:\\ifsp\\2025\\esd-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|solutionrelative:projeto-agenda\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\telefone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|solutionrelative:projeto-agenda\\telefone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|c:\\ifsp\\2025\\esd-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\contato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|solutionrelative:projeto-agenda\\contato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\Program.cs",
               "RelativeDocumentMoniker": "projeto-agenda\\Program.cs",
-              "ToolTip": "C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\Program.cs*",
-              "RelativeToolTip": "projeto-agenda\\Program.cs*",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAkwLAAAAA6AAAAAAAAAA==",
+              "ToolTip": "C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\Program.cs",
+              "RelativeToolTip": "projeto-agenda\\Program.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAqwD0AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-17T00:20:58.701Z",
               "EditorCaption": ""
@@ -59,25 +59,24 @@
               "RelativeToolTip": "projeto-agenda\\Utils.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAuwGEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T00:28:44.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-17T00:28:44.651Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Contato.cs",
               "DocumentMoniker": "C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\Contato.cs",
               "RelativeDocumentMoniker": "projeto-agenda\\Contato.cs",
               "ToolTip": "C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\Contato.cs",
               "RelativeToolTip": "projeto-agenda\\Contato.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAuwF8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-17T00:35:32.698Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Telefone.cs",
               "DocumentMoniker": "C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\Telefone.cs",
               "RelativeDocumentMoniker": "projeto-agenda\\Telefone.cs",
@@ -85,25 +84,24 @@
               "RelativeToolTip": "projeto-agenda\\Telefone.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T00:35:21.29Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-17T00:35:21.29Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Contatos.cs",
               "DocumentMoniker": "C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\Contatos.cs",
               "RelativeDocumentMoniker": "projeto-agenda\\Contatos.cs",
               "ToolTip": "C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\Contatos.cs",
               "RelativeToolTip": "projeto-agenda\\Contatos.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAmwCAAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAA4wD4AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-17T00:35:48.406Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Data.cs",
               "DocumentMoniker": "C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\Data.cs",
               "RelativeDocumentMoniker": "projeto-agenda\\Data.cs",
@@ -111,8 +109,7 @@
               "RelativeToolTip": "projeto-agenda\\Data.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T00:34:34.18Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-17T00:34:34.18Z"
             }
           ]
         }
