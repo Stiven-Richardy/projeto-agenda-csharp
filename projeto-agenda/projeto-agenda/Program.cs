@@ -23,6 +23,10 @@ namespace projeto_agenda
 {
     internal class Program
     {
+        public static Contatos agenda = new Contatos();
+        public static string regexEmail = @"^[\w\.-]+@([\w-]+\.)+[\w-]{2,4}$";
+        public static string regexTelefone = @"^\(?(?:[14689][1-9]|2[12478]|3[1-8]|5[1345]|7[19]|8[1-8])\)? ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$";
+
         static void Main(string[] args)
         {
             int seletor = -1;
@@ -36,7 +40,7 @@ namespace projeto_agenda
                 Console.WriteLine(" 3 - Alterar contato");
                 Console.WriteLine(" 4 - Remover contato");
                 Console.WriteLine(" 5 - Listar contatos");
-                Console.WriteLine("--------------------------------------------");
+                Console.WriteLine(new string('-', 44));
                 Console.Write(" Escolha uma opção: ");
                 seletor = Utils.lerInt(Console.ReadLine(), 0, " Entrada inválida!\n Informe outro número: ");
 
@@ -46,7 +50,7 @@ namespace projeto_agenda
                         Console.WriteLine(" Programa finalizado!");
                         break;
                     case 1:
-                        // adicionarContato();
+                        adicionarContato();
                         break;
                     case 2:
                         // pesquisarContato();
@@ -65,6 +69,45 @@ namespace projeto_agenda
                         break;
                 }
             }
+        }
+
+        static void adicionarContato()
+        {
+            Utils.Titulo("ADICIONAR CONTATO 1/3");
+            Console.WriteLine(" DADOS PESSOAIS");
+            Console.Write(" Informe o nome: ");
+            string nome = Console.ReadLine();
+            Console.Write(" Informe o email: ");
+            string email = Utils.lerRegex(regexEmail, " Email inválido!\n Tente novamente: ");
+
+            Utils.Titulo("ADICIONAR CONTATO 2/3");
+            Console.WriteLine(" DATA DE NASCIMENTO");
+            Console.Write(" Informe o ano: ");
+            int ano = Utils.lerMinMax(Console.ReadLine(), 1900, DateTime.Now.Year, " Entrada inválida!\n Tente novamente: ");
+            Console.Write(" Informe o mês: ");
+            int mes = Utils.lerMinMax(Console.ReadLine(), 1, 12, " Entrada inválida!\n Tente novamente: ");
+            int diasNoMes = DateTime.DaysInMonth(ano, mes);
+            Console.Write(" Informe o dia: ");
+            int dia = Utils.lerMinMax(Console.ReadLine(), 1, diasNoMes, " Entrada inválida!\n Tente novamente: ");
+            Data dataNasc = new Data(dia, mes, ano);
+
+            Utils.Titulo("ADICIONAR CONTATO 3/3");
+            Console.WriteLine(" TELEFONE");
+            Console.Write(" Lista de Tipos:\n 1. Celular\n 2. Telefone Fixo\n Informe o tipo: ");
+            string tipo = Utils.lerTipo(Console.ReadLine(), " Entrada inválida!\n Tente novamente: ");
+            Console.Write(" Informe o número: ");
+            string numero = Utils.lerRegex(regexTelefone, " Número inválido!\n Tente novamente: ");
+            Console.Write(" Esse é o telefone principal?\n 1. Sim\n 0. Não\n Informe uma das opções: ");
+            int verificadorPrincipal = Utils.lerMinMax(Console.ReadLine(), 0, 1, " Entrada inválida!\n Tente novamente: ");
+            bool principal = (verificadorPrincipal == 1);
+
+            Telefone telefone = new Telefone(tipo, numero, principal);
+            Contato contato = new Contato(email, nome, dataNasc, telefone);
+
+            if (agenda.adicionar(contato))
+                Utils.MensagemSucesso("Contato adicionado com sucesso.");
+            else
+                Utils.MensagemErro("Não foi possível adicionar o contato. O nome ou o telefone já existe.");
         }
     }
 }
