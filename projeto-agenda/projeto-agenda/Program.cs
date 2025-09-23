@@ -206,7 +206,7 @@ namespace projeto_agenda
             Utils.Titulo("LISTA DE CONTATOS");
             if (agenda.Agenda.Count > 0)
             {
-                foreach (var contato in agenda.Agenda)
+                foreach (Contato contato in agenda.Agenda)
                 {
                     Console.WriteLine(contato.ToString());
                 }
