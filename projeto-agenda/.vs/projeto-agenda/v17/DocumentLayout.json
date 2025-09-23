@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\contatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|solutionrelative:projeto-agenda\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|c:\\ifsp\\2025\\esd-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\contatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|solutionrelative:projeto-agenda\\contatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\contato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|solutionrelative:projeto-agenda\\contato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|c:\\ifsp\\2025\\esd-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|solutionrelative:projeto-agenda\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01F09882-B059-4FEA-96DD-18F66D525F4A}|projeto-agenda\\projeto-agenda.csproj|C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\Program.cs",
               "RelativeDocumentMoniker": "projeto-agenda\\Program.cs",
               "ToolTip": "C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\Program.cs",
               "RelativeToolTip": "projeto-agenda\\Program.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAqwD0AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAALEAAAAAAAAAAAAgwNoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-17T00:20:58.701Z",
               "EditorCaption": ""
@@ -63,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Contato.cs",
               "DocumentMoniker": "C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\Contato.cs",
               "RelativeDocumentMoniker": "projeto-agenda\\Contato.cs",
@@ -71,8 +71,7 @@
               "RelativeToolTip": "projeto-agenda\\Contato.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAwwF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T00:35:32.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-17T00:35:32.698Z"
             },
             {
               "$type": "Document",
@@ -88,13 +87,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Contatos.cs",
               "DocumentMoniker": "C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\Contatos.cs",
               "RelativeDocumentMoniker": "projeto-agenda\\Contatos.cs",
               "ToolTip": "C:\\IFSP\\2025\\ESD-2\\projeto-agenda-csharp\\projeto-agenda\\projeto-agenda\\Contatos.cs",
               "RelativeToolTip": "projeto-agenda\\Contatos.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA4wD4AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAcwBwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-17T00:35:48.406Z",
               "EditorCaption": ""

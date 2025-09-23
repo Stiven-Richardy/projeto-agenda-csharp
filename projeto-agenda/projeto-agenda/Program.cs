@@ -62,7 +62,7 @@ namespace projeto_agenda
                         removerContato();
                         break;
                     case 5:
-                        // listarContatos();
+                        listarContatos();
                         break;
                     default:
                         Utils.MensagemErro("Digite um número de 0-5!");
@@ -198,6 +198,23 @@ namespace projeto_agenda
             else
             {
                 Utils.MensagemErro("Não foi possível remover o contato. Nome não encontrado.");
+            }
+        }
+
+        static void listarContatos()
+        {
+            Utils.Titulo("LISTA DE CONTATOS");
+            if (agenda.Agenda.Count > 0)
+            {
+                foreach (Contato contato in agenda.Agenda)
+                {
+                    Console.WriteLine(contato.ToString());
+                }
+                Utils.MensagemSucesso("Lista de contatos finalizada.");
+            }
+            else
+            {
+                Console.WriteLine("Nenhum contato na agenda.");
             }
         }
     }

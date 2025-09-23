@@ -75,7 +75,7 @@ namespace projeto_agenda
             if (telefones.Count > 0)
             {
                 s.AppendLine(" Outros Telefones:");
-                foreach (var tel in telefones.Where(t => !t.Principal))
+                foreach (Telefone tel in telefones.Where(t => !t.Principal))
                 {
                     s.AppendLine($" - {tel.Tipo}: {tel.Numero}");
                 }
