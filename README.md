@@ -20,9 +20,9 @@ Este projeto foi desenvolvido com o objetivo de implementar uma agenda de contat
 ```
 📁 projeto-agenda/
 ├── 📁 projeto-agenda
-        📁projeto-restaurante
+        📁 projeto-agenda
         ├── 📄 Program.cs
-        ├── 📄 Contatos.cs
+        ├── 📄 Contato.cs
         ├── 📄 Contatos.cs
         ├── 📄 Telefone.cs
         ├── 📄 Data.cs
